@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="description" content="MAX — your personal AI assistant and AI tools command center." />
+  <title>MAX — Your World, One Command Away</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="MAX home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-name">M<span>A</span>X</span>
+      </a>
+
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-page="home"><span class="nav-icon">⌂</span> Overview</a>
+        <a class="nav-link" href="#assistant" data-page="assistant"><span class="nav-icon">◉</span> MAX Assistant</a>
+        <a class="nav-link" href="#tools" data-page="tools"><span class="nav-icon">✣</span> AI Tools <span class="nav-count">04</span></a>
+        <a class="nav-link" href="#projects" data-page="projects"><span class="nav-icon">▤</span> Projects</a>
+      </nav>
+
+      <div class="side-label side-label-spaced">SYSTEM</div>
+      <nav class="side-nav" aria-label="System navigation">
+        <a class="nav-link" href="#about" data-page="about"><span class="nav-icon">ⓘ</span> About MAX</a>
+        <a class="nav-link" href="#settings" data-page="settings"><span class="nav-icon">⚙</span> Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="system-card">
+          <div class="system-card-top"><span class="status-dot"></span><span>LOCAL INTERFACE</span></div>
+          <p>MAX interface is ready.</p>
+          <small>Desktop actions require a connected local assistant.</small>
+        </div>
+        <div class="profile">
+          <div class="profile-avatar">M</div>
+          <div><strong>MAX Assistant</strong><small>Personal AI workspace</small></div>
+          <span class="profile-more">···</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="breadcrumb-current">Overview</strong></div>
+        <div class="topbar-actions">
+          <div class="connection-pill"><span class="status-dot"></span><span id="connection-label">Interface online</span></div>
+          <button class="icon-button" id="theme-glow" aria-label="Toggle ambient glow" title="Toggle ambient glow">✧</button>
+          <div class="top-avatar">M</div>
+        </div>
+      </header>
+
+      <section class="page active-page" id="home">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL AI COMMAND CENTER</div>
+            <h1>Your world,<br /><span class="gradient-text">one command away.</span></h1>
+            <p class="hero-copy">Meet MAX — your personal AI assistant. Talk naturally, explore your tools, and make your workflow feel effortless.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-go="assistant"><span>◉</span> Launch MAX <span class="button-arrow">↗</span></button>
+              <button class="secondary-button" data-go="tools">Explore AI tools <span>→</span></button>
+            </div>
+            <div class="hero-proof"><span class="proof-avatars"><i>M</i><i>AI</i><i>+</i></span><span>Your personal AI workspace, built to grow.</span></div>
+          </div>
+          <div class="hero-visual" aria-label="Decorative animated MAX AI orb">
+            <div class="orb-label orb-label-top"><span></span> MAX CORE <b>01</b></div>
+            <div class="orb-stage">
+              <div class="orbit orbit-outer"></div><div class="orbit orbit-middle"></div><div class="orbit orbit-inner"></div>
+              <div class="orb-glow"></div>
+              <div class="ai-orb" id="hero-orb"><div class="orb-shine"></div><div class="orb-core"></div><div class="orb-ripple"></div></div>
+              <div class="orbit-node node-one"></div><div class="orbit-node node-two"></div><div class="orbit-node node-three"></div>
+            </div>
+            <div class="orb-label orb-label-bottom"><span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span> READY WHEN YOU ARE</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">YOUR WORKSPACE</div><h2>Everything starts here<span class="cyan-dot">.</span></h2></div>
+          <span class="subtle-text">A little less friction. A lot more flow.</span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-highlight" data-go="assistant" tabindex="0" role="button" aria-label="Open MAX Assistant">
+            <div class="feature-top"><div class="feature-icon cyan-icon">◉</div><span class="card-arrow">↗</span></div>
+            <h3>MAX Assistant</h3><p>Speak or type a command and interact with your assistant from one clean interface.</p>
+            <div class="card-footer"><span class="mini-status"></span> Voice + text interface</div>
+          </article>
+          <article class="feature-card" data-go="tools" tabindex="0" role="button" aria-label="Open AI tools">
+            <div class="feature-top"><div class="feature-icon purple-icon">✣</div><span class="card-arrow">↗</span></div>
+            <h3>AI Tools Library</h3><p>Your growing collection of useful AI projects, organized and easy to access.</p>
+            <div class="card-footer"><span class="mini-status purple-status"></span> Tools in one place</div>
+          </article>
+          <article class="feature-card" data-go="projects" tabindex="0" role="button" aria-label="Open projects">
+            <div class="feature-top"><div class="feature-icon blue-icon">⌘</div><span class="card-arrow">↗</span></div>
+            <h3>Project Lab</h3><p>Showcase experiments, demos, and the ideas powering your AI ecosystem.</p>
+            <div class="card-footer"><span class="mini-status blue-status"></span> Built to expand</div>
+          </article>
+        </div>
+
+        <div class="bottom-grid">
+          <div class="panel quick-panel">
+            <div class="panel-heading"><div><span class="eyebrow">FAST ACCESS</span><h3>Quick commands</h3></div><button class="text-button" data-go="assistant">Open assistant ↗</button></div>
+            <div class="quick-list">
+              <button class="quick-command" data-command="What can you do?"><span class="quick-symbol">✧</span><span><strong>What can you do?</strong><small>Explore MAX capabilities</small></span><span class="quick-arrow">↗</span></button>
+              <button class="quick-command" data-command="Tell me the time"><span class="quick-symbol">◷</span><span><strong>Tell me the time</strong><small>Get the current local time</small></span><span class="quick-arrow">↗</span></button>
+              <button class="quick-command" data-command="Open AI tools"><span class="quick-symbol">✣</span><span><strong>Open AI tools</strong><small>Browse your tools library</small></span><span class="quick-arrow">↗</span></button>
+            </div>
+          </div>
+          <div class="panel status-panel">
+            <div class="panel-heading"><div><span class="eyebrow">AT A GLANCE</span><h3>System overview</h3></div><span class="live-badge"><i></i> LIVE UI</span></div>
+            <div class="status-row"><span class="status-icon">◉</span><span><strong>Assistant interface</strong><small>Ready for input</small></span><b class="status-text">READY</b></div>
+            <div class="status-row"><span class="status-icon purple-icon">✣</span><span><strong>AI tools</strong><small>Demo cards configured</small></span><b class="status-text">4 TOOLS</b></div>
+            <div class="status-row"><span class="status-icon blue-icon">⌁</span><span><strong>Desktop bridge</strong><small>Not connected</small></span><b class="status-text muted-status">OPTIONAL</b></div>
+          </div>
+        </div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Made for a smarter workflow <b>✦</b></span></footer>
+      </section>
+
+      <section class="page" id="assistant">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> MEET YOUR ASSISTANT</div><h1>Talk to <span class="gradient-text">MAX.</span></h1><p>Use your microphone or type below. Voice support depends on your browser.</p></div>
+        <div class="assistant-layout">
+          <div class="panel assistant-main">
+            <div class="assistant-status"><span class="status-dot"></span><span id="assistant-state">MAX is standing by</span><span class="mode-tag">DEMO MODE</span></div>
+            <div class="assistant-orb-wrap">
+              <div class="assistant-orbit"></div><div class="assistant-orbit assistant-orbit-two"></div>
+              <div class="ai-orb assistant-orb" id="assistant-orb"><div class="orb-shine"></div><div class="orb-core"></div><div class="orb-ripple"></div></div>
+              <div class="assistant-orb-caption"><span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span><span id="orb-caption">READY TO CONNECT</span></div>
+            </div>
+            <div class="assistant-greeting"><h2>How can MAX help?</h2><p>Try a command or ask a question to get started.</p></div>
+            <div class="suggestion-chips"><button data-command="What can you do?">What can you do?</button><button data-command="Tell me the time">Time & date</button><button data-command="Open AI tools">Explore tools</button></div>
+            <div class="chat-log" id="chat-log" aria-live="polite">
+              <div class="chat-message assistant-message"><div class="message-avatar">M</div><div class="message-body"><span class="message-author">MAX <small>NOW</small></span><p>Hey there. I'm ready to help. Type a message or tap the microphone to try voice input.</p></div></div>
+            </div>
+            <form class="chat-form" id="chat-form">
+              <label class="sr-only" for="chat-input">Message MAX</label>
+              <input id="chat-input" type="text" placeholder="Message MAX or enter a command..." autocomplete="off" />
+              <button class="mic-button" type="button" id="mic-button" aria-label="Start voice input" title="Start voice input">🎙</button>
+              <button class="send-button" type="submit" aria-label="Send message">↑</button>
+            </form>
+            <div class="input-note"><span>↳</span> Demo responses are local. Connect an AI backend for real AI conversations.</div>
+          </div>
+          <aside class="assistant-side">
+            <div class="panel side-info"><div class="panel-heading"><div><span class="eyebrow">COMMAND CENTER</span><h3>Quick actions</h3></div></div>
+              <button class="action-row" data-command="Open AI tools"><span class="action-icon">✣</span><span><strong>Explore AI tools</strong><small>Browse available tools</small></span><span>↗</span></button>
+              <button class="action-row" data-command="Tell me the time"><span class="action-icon">◷</span><span><strong>Current time</strong><small>Check local time and date</small></span><span>↗</span></button>
+              <button class="action-row" data-command="Open Google"><span class="action-icon">⌕</span><span><strong>Open Google</strong><small>Open a web search</small></span><span>↗</span></button>
+            </div>
+            <div class="panel side-info"><div class="panel-heading"><div><span class="eyebrow">SESSION</span><h3>Activity</h3></div><button class="text-button" id="clear-chat">Clear</button></div>
+              <div class="activity-stat"><span>Messages this session</span><strong id="message-count">1</strong></div>
+              <div class="activity-stat"><span>Voice input</span><strong id="voice-status">Checking…</strong></div>
+              <div class="activity-stat"><span>Desktop connection</span><strong class="muted-status">Not linked</strong></div>
+            </div>
+            <div class="notice-card"><span class="notice-icon">ⓘ</span><div><strong>Desktop commands</strong><p>This website cannot control PC apps by itself. Connect MAX to a trusted local bridge to enable desktop actions.</p></div></div>
+          </aside>
+        </div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Voice. Intelligence. Control. <b>✦</b></span></footer>
+      </section>
+
+      <section class="page" id="tools">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR AI ECOSYSTEM</div><h1>Tools for the <span class="gradient-text">next move.</span></h1><p>One home for your AI experiments. Add links to your real projects as they go live.</p></div>
+        <div class="tools-toolbar"><div class="search-box"><span>⌕</span><input id="tool-search" type="search" placeholder="Search tools..." aria-label="Search AI tools" /></div><div class="filter-chips" id="tool-filters"><button class="filter-chip active" data-filter="all">All tools</button><button class="filter-chip" data-filter="assistant">Assistant</button><button class="filter-chip" data-filter="productivity">Productivity</button><button class="filter-chip" data-filter="experimental">Experimental</button></div></div>
+        <div class="tools-grid" id="tools-grid">
+          <article class="tool-card" data-category="assistant" data-name="MAX Voice Assistant personal voice commands"><div class="tool-card-top"><div class="tool-icon tool-icon-cyan">◉</div><span class="tool-status available">INTERFACE READY</span></div><h3>MAX Voice Assistant</h3><p>Your personal voice-first assistant interface with chat, voice input, and quick commands.</p><div class="tool-tags"><span>Voice UI</span><span>Assistant</span></div><button class="tool-launch" data-go="assistant">Open assistant <span>↗</span></button></article>
+          <article class="tool-card" data-category="productivity" data-name="AI Prompt Studio prompts writing"><div class="tool-card-top"><div class="tool-icon tool-icon-purple">✧</div><span class="tool-status demo">DEMO</span></div><h3>AI Prompt Studio</h3><p>Draft, organize, and refine prompts for your favorite AI workflows.</p><div class="tool-tags"><span>Prompts</span><span>Productivity</span></div><button class="tool-launch" data-demo="AI Prompt Studio">Preview tool <span>↗</span></button></article>
+          <article class="tool-card" data-category="experimental" data-name="Smart Notes AI notes summaries"><div class="tool-card-top"><div class="tool-icon tool-icon-blue">▤</div><span class="tool-status upcoming">COMING SOON</span></div><h3>Smart Notes</h3><p>A future space for organizing ideas, meeting notes, and useful summaries.</p><div class="tool-tags"><span>Notes</span><span>Experimental</span></div><button class="tool-launch" data-demo="Smart Notes">Preview concept <span>↗</span></button></article>
+          <article class="tool-card" data-category="productivity" data-name="Workflow Automator tasks automation"><div class="tool-card-top"><div class="tool-icon tool-icon-orange">⌘</div><span class="tool-status upcoming">COMING SOON</span></div><h3>Workflow Automator</h3><p>A planned hub for launching supported shortcuts and repeatable workflows.</p><div class="tool-tags"><span>Automation</span><span>Productivity</span></div><button class="tool-launch" data-demo="Workflow Automator">Preview concept <span>↗</span></button></article>
+        </div>
+        <div class="empty-state hidden" id="empty-tools"><div>⌕</div><h3>No tools found</h3><p>Try a different search or category.</p></div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Your AI ecosystem, growing one tool at a time. <b>✦</b></span></footer>
+      </section>
+
+      <section class="page" id="projects">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> BUILT & IN PROGRESS</div><h1>The <span class="gradient-text">project lab.</span></h1><p>A home for the tools, experiments, and ideas behind the MAX ecosystem.</p></div>
+        <div class="project-grid">
+          <article class="project-card project-featured"><div class="project-art"><div class="project-art-grid"></div><div class="mini-orb"></div><span class="project-art-label">M / 01</span></div><div class="project-content"><div class="project-meta"><span>PERSONAL AI</span><span class="tool-status available">ACTIVE PROJECT</span></div><h2>MAX — Personal Assistant</h2><p>A JARVIS-inspired desktop assistant designed for voice commands and supported computer tasks, paired with a central web interface.</p><div class="tool-tags"><span>JavaScript</span><span>Voice UI</span><span>Desktop integration</span></div><button class="primary-button small-button" data-go="assistant">Open interface ↗</button></div></article>
+          <article class="project-card"><div class="project-art project-art-purple"><div class="project-art-grid"></div><div class="project-glyph">✣</div><span class="project-art-label">LAB / 02</span></div><div class="project-content"><div class="project-meta"><span>AI PLATFORM</span><span class="tool-status upcoming">PLANNED</span></div><h2>AI Tools Hub</h2><p>A unified library for launching and organizing future AI projects from one workspace.</p><div class="tool-tags"><span>React-ready</span><span>UI design</span></div><button class="secondary-button project-action" data-go="tools">Explore tools ↗</button></div></article>
+        </div>
+        <div class="integration-banner"><div class="integration-icon">⌁</div><div><h3>Have a project already running?</h3><p>Add its live URL or repository link to the project cards in <code>script.js</code>.</p></div><button class="secondary-button" data-go="settings">View setup notes ↗</button></div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Ideas into interfaces. <b>✦</b></span></footer>
+      </section>
+
+      <section class="page" id="about">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> THE IDEA BEHIND MAX</div><h1>More than a <span class="gradient-text">voice.</span></h1><p>One personal assistant. One growing ecosystem. A simpler way to interact with your tools.</p></div>
+        <div class="about-layout"><div class="panel about-panel"><div class="about-emblem"><div class="about-emblem-inner">M<span>A</span>X</div></div><div class="eyebrow">THE VISION</div><h2>Your personal AI command center.</h2><p>MAX is a JARVIS-inspired assistant concept built around voice interaction, useful shortcuts, and supported desktop actions. This website provides a polished home for the assistant and the AI tools built around it.</p><p>The web interface and desktop assistant are separate pieces of software. Features such as launching local applications require a secure connection to the desktop app and are not enabled by this front end alone.</p><button class="primary-button" data-go="assistant">Try the interface ↗</button></div>
+          <div class="about-points"><article class="about-point"><span>01</span><div><h3>Natural interaction</h3><p>Use voice or text to interact with the assistant interface.</p></div></article><article class="about-point"><span>02</span><div><h3>A unified workspace</h3><p>Bring assistant features, AI tools, and projects into one place.</p></div></article><article class="about-point"><span>03</span><div><h3>Built to expand</h3><p>Add integrations as your desktop app and AI projects evolve.</p></div></article></div></div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Small interface. Big ambitions. <b>✦</b></span></footer>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PREFERENCES</div><h1>Make MAX <span class="gradient-text">yours.</span></h1><p>Configure this interface and check the requirements for connecting your desktop assistant.</p></div>
+        <div class="settings-layout">
+          <div class="panel settings-panel"><div class="panel-heading"><div><span class="eyebrow">INTERFACE</span><h3>Display preferences</h3></div></div>
+            <div class="setting-row"><div><strong>Ambient glow</strong><p>Show or hide the background lighting effects.</p></div><label class="switch"><input type="checkbox" id="glow-setting" checked /><span></span></label></div>
+            <div class="setting-row"><div><strong>Spoken responses</strong><p>Allow the browser to read MAX's demo responses aloud.</p></div><label class="switch"><input type="checkbox" id="speech-setting" checked /><span></span></label></div>
+            <div class="setting-row"><div><strong>Voice input</strong><p>Use the browser's speech recognition when available.</p></div><span class="setting-value" id="voice-setting-status">Checking support…</span></div>
+          </div>
+          <div class="panel settings-panel"><div class="panel-heading"><div><span class="eyebrow">INTEGRATION</span><h3>Desktop assistant connection</h3></div><span class="tool-status upcoming">NOT CONNECTED</span></div>
+            <p class="settings-copy">To allow website actions to reach your local MAX app, run a local backend and define a narrow, authenticated API. Never expose arbitrary shell execution to a public webpage.</p>
+            <div class="integration-check"><span>01</span><div><strong>Run your MAX desktop assistant</strong><p>Confirm the local app works independently.</p></div></div>
+            <div class="integration-check"><span>02</span><div><strong>Create a local API bridge</strong><p>Expose only specific, validated commands on localhost.</p></div></div>
+            <div class="integration-check"><span>03</span><div><strong>Connect the frontend</strong><p>Replace the demo handler in <code>script.js</code> with your bridge endpoint.</p></div></div>
+          </div>
+        </div>
+        <footer class="footer"><span>© <span data-year></span> MAX AI</span><span>Configured for your workflow. <b>✦</b></span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
